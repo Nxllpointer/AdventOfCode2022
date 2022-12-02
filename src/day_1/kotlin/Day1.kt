@@ -22,20 +22,16 @@ fun part2(elves: Collection<Elf>) {
 
 fun main() {
     val elves = getAOCInput { rawInput ->
-        val elves = mutableSetOf<Elf>()
-
         rawInput
             .trim()
             .split("\n\n")
-            .forEach { rawElfCaloriesList ->
+            .map { rawElfCaloriesList ->
                 val elfCalories = rawElfCaloriesList
                     .split("\n")
                     .sumOf { it.toInt() }
 
-                elves += Elf(elfCalories)
+                Elf(elfCalories)
             }
-
-        elves
     }
 
     part1(elves)

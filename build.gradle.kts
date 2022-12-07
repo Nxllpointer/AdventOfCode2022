@@ -7,7 +7,7 @@ plugins {
 group = "de.nxll.aoc2022"
 version = "1.0"
 
-val currentDay = 6
+val currentDay = 7
 
 repositories {
     mavenCentral()
